@@ -1,6 +1,6 @@
 
-
-
+window.addEventListener("DOMContentLoaded", () => {
+})
 
 //global variables 
 
@@ -8,7 +8,7 @@
 
 ///DOM elements
 
-document.querySelector('button').addEventListener('click', ()=> {
+const clicked = document.querySelector('button').addEventListener('click', (e)=> {
     console.log('this is working');
 })
 
@@ -18,31 +18,15 @@ document.querySelector('button').addEventListener('click', ()=> {
 ///functions
 
 
-//function to creat the flipCards from the start button
+//function to creats the inital player window information
 
-const createCards = (numOfCards) => {
-    for (let i = 0; i < numOfCards.lenght; i++) {
-        const cards = document.createElement("div");
-        //append the cards
-        document.querySelector(".cards").append(cards);
-        //generate basic style'
-        applyStartColor(cards)
-    }
-    
-}
-
-const cardsContainer = document.querySelector('.cards')
-
-document.querySelector('button').addEventListener('click', () => {
-    createCards(15);
-});
-
-
-const applyStartColor = () => {
-    cards.setAttribute("style", "background-color: blue;");
-      
-}
-
+const generatePlayerName = 
+    document.querySelector("button").addEventListener('click', (e)=> {
+        document.querySelectorAll("li")[0].innerHTML = "awesome programmer"
+})
+const generatePlayerLives = document.querySelector("button").addEventListener("click", (e) => {
+        document.querySelectorAll("li")[1].innerHTML = "lives: 3"
+})
 
 
 

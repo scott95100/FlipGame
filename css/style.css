@@ -27,7 +27,7 @@ h1 {
     height:50px;
     
     border: 4px solid black;
-    /* border:1px solid rgba(0, 0, 0, 0.575);" */
+    
 }
 .start {
     display: inline-block;
@@ -45,10 +45,10 @@ h1 {
     border: black;
     display: flex;
     justify-content: center;
+    align-items: center;
     border: 4px solid black;
     box-sizing: border-box;
-    
-    
+    background-color: rgb(93, 84, 84);  
 }
 .row {
     width: 100%;
