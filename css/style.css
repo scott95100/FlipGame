@@ -41,14 +41,14 @@ li {
     height: 300px;
     padding-right:100px;
     padding-left:100px;
-    color: grey;
+    color: rgb(44, 12, 12);
     border: black;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 4px solid black;
     box-sizing: border-box;
-    background-color: rgb(93, 84, 84);  
+    background-color: rgb(44, 12, 12);  
 }
 .row {
     width: 100%;
