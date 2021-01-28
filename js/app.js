@@ -45,10 +45,11 @@ let HTMLflipArr = []
 let objectFlipArr = []
 let booleanFlipArr = []
 
-
-
-// rgb(44, 12, 12)
 let pairsMade = 0
+let defaultLives = 3
+
+
+
 
 const flipCard =()=>{
     
@@ -61,10 +62,234 @@ const flipCard =()=>{
                 DOMflipArr.push(flippedCard_1)
                 document.querySelector('#DOM').style.background = 'black'
                 document.querySelector('#DOM').style.color = "white"
-                if((DOMflipArr[0] === "DOM" || DOMflipArr[0] ==="DOMmatch") && (DOMflipArr[1] === "DOM" ||DOMflipArr[1] === "DOMmatch")){
+                cards[1].addEventListener('click', (e)=>{
+                    defaultLives --
+                    document.querySelectorAll("input")[0].value = defaultLives
+                    DOMflipArr = []
+                    booleanFlipArr = []
+                    if(booleanFlipArr.length === 0 && DOMflipArr.length === 0){
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        
+                    }
+                    
+                })
+                
+                cards[2].addEventListener('click', (e)=>{
+                    defaultLives --
+                    DOMflipArr = []
+                    objectFlipArr = []
+                    
+                    document.querySelectorAll("input")[0].value = defaultLives
+                    document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                    document.querySelector('#Object').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#Object').style.color = "rgb(44, 12, 12)"
+                })
+                cards[3].addEventListener('click', (e)=>{
+                    defaultLives --
+                    HTMLflipArr = []
+                    DOMflipArr = []
+                    document.querySelectorAll("input")[0].value = defaultLives
+                    document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                    document.querySelector('#HTML').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#HTML').style.color = "rgb(44, 12, 12)"
+                })
+                cards[4].addEventListener('click', (e)=>{
+                    defaultLives --
+                    booleanFlipArr = []
+                    DOMflipArr = []
+                    document.querySelectorAll("input")[0].value = defaultLives
+                    document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                    document.querySelector('#booleanMatch').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#booleanMatch').style.color = "rgb(44, 12, 12)"
+                })
+                cards[5].addEventListener('click', (e)=>{
+                    defaultLives --
+                    objectFlipArr = []
+                    DOMflipArr = []
+                    document.querySelectorAll("input")[0].value = defaultLives
+                    document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                    document.querySelector('#ObjectMatch').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#ObjectMatch').style.color = "rgb(44, 12, 12)"
+                })
+                cards[7].addEventListener('click', (e)=>{
+                    defaultLives --
+                    HTMLflipArr = []
+                    DOMflipArr = []
+                    document.querySelectorAll("input")[0].value = defaultLives
+                    document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                    document.querySelector('#HTMLmatch').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#HTMLmatch').style.color = "rgb(44, 12, 12)"
+                })
+                cards[6].addEventListener('click', (e)=>{
+                    DOMflipArr.push("DOMmatch")
+                    if((DOMflipArr[0] === "DOM" || DOMflipArr[0] ==="DOMmatch") && (DOMflipArr[1] === "DOM" ||DOMflipArr[1] === "DOMmatch")){
+                        pairsMade ++
+                        document.querySelectorAll("input")[1].value = pairsMade
+                        
+                    }
+                })
+              
+            })
+        }
+        
+        if(htmlIds[i] === "#boolean"){
+            cards[1].addEventListener('click', (e)=> {
+                flippedCard_1 = "boolean"
+                booleanFlipArr.push(flippedCard_1)
+                document.querySelector('#boolean').style.background = 'black'
+                document.querySelector('#boolean').style.color = "white"
+                cards[0].addEventListener('click', (e)=>{
+                    defaultLives --
+                    booleanFlipArr = []
+                    DOMflipArr = []
+                    document.querySelectorAll("input")[0].value = defaultLives
+                    document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                })
+                cards[2].addEventListener('click', (e)=>{
+                    defaultLives --
+                    booleanFlipArr = []
+                    objectFlipArr = []
+                    document.querySelectorAll("input")[0].value = defaultLives
+                    document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    document.querySelector('#Object').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#Object').style.color = "rgb(44, 12, 12)"
+                })
+                cards[3].addEventListener('click', (e)=>{
+                    defaultLives --
+                    booleanFlipArr = []
+                    HTMLflipArr = []
+                    document.querySelectorAll("input")[0].value = defaultLives
+                    document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    document.querySelector('#HTML').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#HTML').style.color = "rgb(44, 12, 12)"
+                })
+                cards[5].addEventListener('click', (e)=>{
+                    defaultLives --
+                    booleanFlipArr = []
+                    objectFlipArr = []
+                    document.querySelectorAll("input")[0].value = defaultLives
+                    document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    document.querySelector('#ObjectMatch').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#ObjectMatch').style.color = "rgb(44, 12, 12)"
+                })
+                cards[6].addEventListener('click', (e)=>{
+                    defaultLives --
+                    booleanFlipArr = []
+                    DOMflipArr = []
+                    document.querySelectorAll("input")[0].value = defaultLives
+                    document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    document.querySelector('#DOMmatch').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#DOMmatch').style.color = "rgb(44, 12, 12)"
+                })
+                cards[7].addEventListener('click', (e)=>{
+                    defaultLives --
+                    booleanFlipArr = []
+                    HTMLflipArr = []
+                    document.querySelectorAll("input")[0].value = defaultLives
+                    document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    document.querySelector('#HTMLmatch').style.background = 'rgb(44, 12, 12)'
+                    document.querySelector('#HTMLmatch').style.color = "rgb(44, 12, 12)"
+                })
+                cards[4].addEventListener('click', (e)=>{
+                    booleanFlipArr.push("booleanMatch")
+                    if((DOMflipArr[0] === "boolean" || DOMflipArr[0] ==="booleanMatch") && (DOMflipArr[1] === "boolean" ||DOMflipArr[1] === "booleanMatch")){
+                        pairsMade ++
+                        document.querySelectorAll("input")[1].value = pairsMade
+                        
+                    }
+                })
+              
+            })
+        }
+        if(htmlIds[i] === "#Object"){
+            cards[2].addEventListener('click', (e)=> {
+                flippedCard_1 = "object"
+                objectFlipArr.push(flippedCard_1)
+                document.querySelector('#Object').style.background = 'black'
+                document.querySelector('#Object').style.color = "white"
+                if((objectFlipArr[0] === "object" || objectFlipArr[0] ==="objectMatch") && (objectFlipArr[1] === "object" ||objectFlipArr[1] === "objectMatch")){
                     pairsMade ++
                     document.querySelectorAll("input")[1].value = pairsMade
                     
+                }else{
+                    cards[0].addEventListener('click', (e)=>{
+                        defaultLives --
+                        objectFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#Object').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#Object').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        
+                    })
+                    cards[1].addEventListener('click', (e)=>{
+                        defaultLives --
+                        objectFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#Object').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#Object').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[3].addEventListener('click', (e)=>{
+                        defaultLives --
+                        objectFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#Object').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#Object').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#HTML').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#HTML').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[4].addEventListener('click', (e)=>{
+                        defaultLives --
+                        objectFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#Object').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#Object').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#booleanMatch').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#BooleanMatch').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[6].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[7].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+
                 }
             })
         }
@@ -78,32 +303,80 @@ const flipCard =()=>{
                     pairsMade ++
                     document.querySelectorAll("input")[1].value = pairsMade
                     
-                }
-            })
-        }
-        if(htmlIds[i] === "#boolean"){
-            cards[1].addEventListener('click', (e)=> {
-                flippedCard_1 = "boolean"
-                booleanFlipArr.push(flippedCard_1)
-                document.querySelector('#boolean').style.background = 'black'
-                document.querySelector('#boolean').style.color = "white"
-                if((booleanFlipArr[0] === "boolean" || booleanFlipArr[0] ==="booleanMatch") && (booleanFlipArr[1] === "boolean" ||booleanFlipArr[1] === "booleanMatch")){
-                    pairsMade ++
-                    document.querySelectorAll("input")[1].value = pairsMade
-                    
-                }
-            })
-        }
-        if(htmlIds[i] === "#Object"){
-            cards[2].addEventListener('click', (e)=> {
-                flippedCard_1 = "object"
-                objectFlipArr.push(flippedCard_1)
-                document.querySelector('#Object').style.background = 'black'
-                document.querySelector('#Object').style.color = "white"
-                if((objectFlipArr[0] === "object" || objectFlipArr[0] ==="objectMatch") && (objectFlipArr[1] === "object" ||objectFlipArr[1] === "objectMatch")){
-                    pairsMade ++
-                    document.querySelectorAll("input")[1].value = pairsMade
-                    
+                }else{
+                    cards[0].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[1].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[2].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[4].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[5].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[6].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+
                 }
             })
         }
@@ -117,6 +390,80 @@ const flipCard =()=>{
                     pairsMade ++
                     document.querySelectorAll("input")[1].value = pairsMade
                     
+                }else{
+                    cards[0].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[2].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[3].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[5].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[6].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[7].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+
                 }
             })
         }
@@ -130,6 +477,80 @@ const flipCard =()=>{
                     pairsMade ++
                     document.querySelectorAll("input")[1].value = pairsMade
                     
+                }else{
+                    cards[0].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[1].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[3].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[4].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[6].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[7].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+
                 }
             })
         }
@@ -145,6 +566,80 @@ const flipCard =()=>{
                     pairsMade ++
                     document.querySelectorAll("input")[1].value = pairsMade
                     
+                }else{
+                    cards[1].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[2].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[3].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[4].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[5].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[7].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+
                 }
             })
         }
@@ -158,6 +653,80 @@ const flipCard =()=>{
                     pairsMade ++
                     document.querySelectorAll("input")[1].value = pairsMade
                     
+                }else{
+                    cards[0].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[1].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[2].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[4].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[5].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+                    cards[6].addEventListener('click', (e)=>{
+                        defaultLives --
+                        DOMflipArr = []
+                        HTMLflipArr = []
+                        objectFlipArr = []
+                        booleanFlipArr = []
+                        document.querySelectorAll("input")[0].value = defaultLives
+                        document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#DOM').style.color = "rgb(44, 12, 12)"
+                        document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+                        document.querySelector('#boolean').style.color = "rgb(44, 12, 12)"
+                    })
+
                 }
             })
             
