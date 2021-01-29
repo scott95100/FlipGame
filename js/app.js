@@ -22,7 +22,7 @@ console.log(cards)
 // console.log(document.querySelectorAll('#one')[0])
 
 
-
+// console.log(document.querySelectorAll(".DOM")[0].style.background = 'blue')
 
 
 ///DOM elements
@@ -69,7 +69,7 @@ const cardOneEvent = (e)=>{
             }
         }else {
             
-            allCardsArr = []
+            
             defaultLives --
             if(defaultLives <=0){
                 console.log(`game over`)
@@ -78,10 +78,24 @@ const cardOneEvent = (e)=>{
                 document.body.appendChild(btn_1)
             }
             document.querySelectorAll("input")[0].value = defaultLives
-            document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
-            document.querySelector('#DOMmatch').style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[0].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[0].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[1].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[1].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[2].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[2].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[3].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[3].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[4].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[4].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[5].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[5].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[6].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[6].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[7].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[7].style.color = "rgb(44, 12, 12)"
+            allCardsArr = []
             
-            console.log(document.querySelector('#DOM').style.background, document.querySelector('#DOMmatch').style.color)
             //change styles back 
             //remove everything from the array
             //reset card styling 
@@ -117,7 +131,7 @@ const cardTwoEvent = (e)=>{
                 document.body.appendChild(btn)
             }
         }else {
-            
+            console.log('this really works')
             console.log(`this should work`)
             allCardsArr = []
             defaultLives --
@@ -129,8 +143,22 @@ const cardTwoEvent = (e)=>{
             }
             document.querySelectorAll("input")[0].value = defaultLives
             
-            document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
-            document.querySelector('#booleanMatch').style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[0].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[0].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[1].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[1].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[2].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[2].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[3].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[3].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[4].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[4].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[5].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[5].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[6].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[6].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[7].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[7].style.color = "rgb(44, 12, 12)"
 
             //change styles back 
             //remove everything from the array
@@ -178,8 +206,22 @@ const cardThreeEvent = (e)=>{
             }
             document.querySelectorAll("input")[0].value = defaultLives
             
-            document.querySelector('#Object').style.background = 'rgb(44, 12, 12)'
-            document.querySelector('#ObjectMatch').style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[0].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[0].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[1].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[1].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[2].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[2].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[3].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[3].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[4].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[4].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[5].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[5].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[6].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[6].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[7].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[7].style.color = "rgb(44, 12, 12)"
             //change styles back 
             //remove everything from the array
             //reset card styling 
@@ -225,8 +267,22 @@ const cardFourEvent = (e)=>{
             }
             document.querySelectorAll("input")[0].value = defaultLives
             
-            document.querySelector('#HTML').style.background = 'rgb(44, 12, 12)'
-            document.querySelector('#HTMLmatch').style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[0].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[0].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[1].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[1].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[2].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[2].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[3].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[3].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[4].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[4].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[5].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[5].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[6].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[6].style.color = "rgb(44, 12, 12)"
+            document.querySelectorAll('.all')[7].style.background = 'rgb(44, 12, 12)'
+            document.querySelectorAll('.all')[7].style.color = "rgb(44, 12, 12)"
             //change styles back 
             //remove everything from the array
             //reset card styling 
