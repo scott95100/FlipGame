@@ -6,8 +6,7 @@ const htmlIds = ["#DOM", "#DOMmatch", "#boolean", "#booleanMatch", "#Object", "#
 
 const cards = document.querySelectorAll(".card")
 
-let DOMclicked = false;
-let DOMmatchClicked = false;
+
 ////test area///
 
 console.log(cards)
@@ -18,9 +17,9 @@ console.log(cards)
 ///end test area
 
 
-
-
-
+// console.log(document.querySelectorAll('#6')[0][1])
+// console.log(document.querySelectorAll('#A')[0][1])
+// console.log(document.querySelectorAll('#one')[0])
 
 
 
@@ -54,6 +53,7 @@ const cardOneEvent = (e)=>{
         //right now this only targets the first card to flip
     e.target.style.background = "black"
     e.target.style.color = "white"
+    
     if(allCardsArr.length == 2){
         //do a check
         if(allCardsArr[0] === allCardsArr[1]){
@@ -61,12 +61,25 @@ const cardOneEvent = (e)=>{
             allCardsArr = []
             pairsMade ++
             document.querySelectorAll("input")[1].value = pairsMade
-
+            if(pairsMade >= 4){
+                console.log(`you win`)
+                let btn =document.createElement("button")
+                btn.innerHTML = "you win"
+                document.body.appendChild(btn)
+            }
         }else {
+            
             allCardsArr = []
             defaultLives --
+            if(defaultLives <=0){
+                console.log(`game over`)
+                let btn_1 = document.createElement("button")
+                btn_1.innerHTML = `Your Lose!`
+                document.body.appendChild(btn_1)
+            }
             document.querySelectorAll("input")[0].value = defaultLives
-            
+
+
             document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
             document.querySelector('#DOMmatch').style.color = "rgb(44, 12, 12)"
             //change styles back 
@@ -82,13 +95,14 @@ cards[6].addEventListener('click', cardOneEvent)
 //cards 1 and 4 flip function (matching boolean's)
 
 const cardTwoEvent = (e)=>{
+    
     flippedCard_2 = e.target.getAttribute('extra')
     console.log(flippedCard_2)
     allCardsArr.push(flippedCard_2)
         //right now this only targets the first card to flip
     e.target.style.background = "black"
     e.target.style.color = "white"
-    console.log(allCardsArr)
+    
     if(allCardsArr.length == 2){
         //do a check
         if(allCardsArr[0] === allCardsArr[1]){
@@ -96,11 +110,23 @@ const cardTwoEvent = (e)=>{
             allCardsArr = []
             pairsMade ++
             document.querySelectorAll("input")[1].value = pairsMade
-
+            if(pairsMade >= 4){
+                console.log(`you win`)
+                let btn =document.createElement("button")
+                btn.innerHTML = "you win"
+                document.body.appendChild(btn)
+            }
         }else {
+            
             console.log(`this should work`)
             allCardsArr = []
             defaultLives --
+            if(defaultLives <=0){
+                console.log(`game over`)
+                let btn_1 = document.createElement("button")
+                btn_1.innerHTML = `Your Lose!`
+                document.body.appendChild(btn_1)
+            }
             document.querySelectorAll("input")[0].value = defaultLives
             
             document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
@@ -118,12 +144,14 @@ cards[4].addEventListener('click', cardTwoEvent)
 //cards 2 and 5 flip function(matching object's)
 
 const cardThreeEvent = (e)=>{
+    
     flippedCard_3 = e.target.getAttribute('extra')
     console.log(flippedCard_3)
     allCardsArr.push(flippedCard_3)
         //right now this only targets the first card to flip
     e.target.style.background = "black"
     e.target.style.color = "white"
+    
     if(allCardsArr.length == 2){
         //do a check
         if(allCardsArr[0] === allCardsArr[1]){
@@ -131,10 +159,22 @@ const cardThreeEvent = (e)=>{
             allCardsArr = []
             pairsMade ++
             document.querySelectorAll("input")[1].value = pairsMade
-
+            if(pairsMade >= 4){
+                console.log(`you win`)
+                let btn =document.createElement("button")
+                btn.innerHTML = "you win"
+                document.body.appendChild(btn)
+            }
         }else {
+            
             allCardsArr = []
             defaultLives --
+            if(defaultLives <=0){
+                console.log(`game over`)
+                let btn_1 = document.createElement("button")
+                btn_1.innerHTML = `Your Lose!`
+                document.body.appendChild(btn_1)
+            }
             document.querySelectorAll("input")[0].value = defaultLives
             
             document.querySelector('#Object').style.background = 'rgb(44, 12, 12)'
@@ -152,12 +192,14 @@ cards[5].addEventListener('click', cardThreeEvent)
 //cards 3 and 7 flip function(match HTML's)
 
 const cardFourEvent = (e)=>{
+    
     flippedCard_4 = e.target.getAttribute('extra')
-    console.log(flippedCard_4)
+    
     allCardsArr.push(flippedCard_4)
         //right now this only targets the first card to flip
     e.target.style.background = "black"
     e.target.style.color = "white"
+    
     if(allCardsArr.length == 2){
         //do a check
         if(allCardsArr[0] === allCardsArr[1]){
@@ -165,10 +207,21 @@ const cardFourEvent = (e)=>{
             allCardsArr = []
             pairsMade ++
             document.querySelectorAll("input")[1].value = pairsMade
-
+            if(pairsMade >= 4){
+                console.log(`you win`)
+                let btn =document.createElement("button")
+                btn.innerHTML = "you win"
+                document.body.appendChild(btn)
+            }
         }else {
             allCardsArr = []
             defaultLives --
+            if(defaultLives <=0){
+                console.log(`game over`)
+                let btn_1 = document.createElement("button")
+                btn_1.innerHTML = `Your Lose!`
+                document.body.appendChild(btn_1)
+            }
             document.querySelectorAll("input")[0].value = defaultLives
             
             document.querySelector('#HTML').style.background = 'rgb(44, 12, 12)'
@@ -198,44 +251,6 @@ const generatePlayerPairs = document.querySelector("button").addEventListener("c
     document.querySelectorAll("input")[1].value = 0
 })
 
-//function that identifies when pairs are matched/identified or not
-
-// const pairCompair = () => {
-    
-// }
-
-
-
-
-
-
-
-//function that generates the "winner" window when all pairs are made on the board
-
-// researching event listener .oninput
-// const values = document.getAttribute("pairs")
-// const generateWinner = (e) => {
-//     if(document.querySelectorAll("input")[1].value == 4){
-//         console.log('winner')
-//     }
-//     let currentPairsValue = document.querySelectorAll("input")[1].value
-//     console.log(`currently at ${currentPairsValue} pairs`)
-//     //create a window with innerHTML declairing game won
-//     //replace all cards backgrounds to original color
-// }
-// values.addEventListener('oninput',generateWinner)
-
-//function that generates the game over window when lives = 0;
-const gameOver = () => {
-    //if lives === 0 
-    //generate window declaring game over 
-    //reset all backgrounds to original 
-}
-
-
-
-
-///////////////////////////////////
 
 
 
