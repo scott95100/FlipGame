@@ -78,10 +78,10 @@ const cardOneEvent = (e)=>{
                 document.body.appendChild(btn_1)
             }
             document.querySelectorAll("input")[0].value = defaultLives
-
-
             document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
             document.querySelector('#DOMmatch').style.color = "rgb(44, 12, 12)"
+            
+            console.log(document.querySelector('#DOM').style.background, document.querySelector('#DOMmatch').style.color)
             //change styles back 
             //remove everything from the array
             //reset card styling 
@@ -122,7 +122,7 @@ const cardTwoEvent = (e)=>{
             allCardsArr = []
             defaultLives --
             if(defaultLives <=0){
-                console.log(`game over`)
+                console.log(`game over 125`)
                 let btn_1 = document.createElement("button")
                 btn_1.innerHTML = `Your Lose!`
                 document.body.appendChild(btn_1)
@@ -131,6 +131,7 @@ const cardTwoEvent = (e)=>{
             
             document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
             document.querySelector('#booleanMatch').style.color = "rgb(44, 12, 12)"
+
             //change styles back 
             //remove everything from the array
             //reset card styling 
