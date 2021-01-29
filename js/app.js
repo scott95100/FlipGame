@@ -40,20 +40,209 @@ const clicked = document.querySelector('button').addEventListener('click', (e)=>
 
 //function to makes the playing cards flip when clicked
 
-let DOMflipArr = []
-let HTMLflipArr = []
-let objectFlipArr = []
-let booleanFlipArr = []
 
+let allCardsArr = []
 let pairsMade = 0
 let defaultLives = 3
 
+//card O and 6 flip function (matching DOM's)
+
+const cardOneEvent = (e)=>{
+    flippedCard_1 = e.target.getAttribute('extra')
+    console.log(flippedCard_1)
+    allCardsArr.push(flippedCard_1)
+        //right now this only targets the first card to flip
+    e.target.style.background = "black"
+    e.target.style.color = "white"
+    if(allCardsArr.length == 2){
+        //do a check
+        if(allCardsArr[0] === allCardsArr[1]){
+            console.log('its a match')
+            allCardsArr = []
+            pairsMade ++
+            document.querySelectorAll("input")[1].value = pairsMade
+
+        }else {
+            allCardsArr = []
+            defaultLives --
+            document.querySelectorAll("input")[0].value = defaultLives
+            
+            document.querySelector('#DOM').style.background = 'rgb(44, 12, 12)'
+            document.querySelector('#DOMmatch').style.color = "rgb(44, 12, 12)"
+            //change styles back 
+            //remove everything from the array
+            //reset card styling 
+        }
+    }
+}
+
+cards[0].addEventListener('click', cardOneEvent)
+cards[6].addEventListener('click', cardOneEvent)
+
+//cards 1 and 4 flip function (matching boolean's)
+
+const cardTwoEvent = (e)=>{
+    flippedCard_2 = e.target.getAttribute('extra')
+    console.log(flippedCard_2)
+    allCardsArr.push(flippedCard_2)
+        //right now this only targets the first card to flip
+    e.target.style.background = "black"
+    e.target.style.color = "white"
+    console.log(allCardsArr)
+    if(allCardsArr.length == 2){
+        //do a check
+        if(allCardsArr[0] === allCardsArr[1]){
+            console.log('its a match')
+            allCardsArr = []
+            pairsMade ++
+            document.querySelectorAll("input")[1].value = pairsMade
+
+        }else {
+            console.log(`this should work`)
+            allCardsArr = []
+            defaultLives --
+            document.querySelectorAll("input")[0].value = defaultLives
+            
+            document.querySelector('#boolean').style.background = 'rgb(44, 12, 12)'
+            document.querySelector('#booleanMatch').style.color = "rgb(44, 12, 12)"
+            //change styles back 
+            //remove everything from the array
+            //reset card styling 
+        }
+    }
+}
+
+cards[1].addEventListener('click', cardTwoEvent)
+cards[4].addEventListener('click', cardTwoEvent)
+
+//cards 2 and 5 flip function(matching object's)
+
+const cardThreeEvent = (e)=>{
+    flippedCard_3 = e.target.getAttribute('extra')
+    console.log(flippedCard_3)
+    allCardsArr.push(flippedCard_3)
+        //right now this only targets the first card to flip
+    e.target.style.background = "black"
+    e.target.style.color = "white"
+    if(allCardsArr.length == 2){
+        //do a check
+        if(allCardsArr[0] === allCardsArr[1]){
+            console.log('its a match')
+            allCardsArr = []
+            pairsMade ++
+            document.querySelectorAll("input")[1].value = pairsMade
+
+        }else {
+            allCardsArr = []
+            defaultLives --
+            document.querySelectorAll("input")[0].value = defaultLives
+            
+            document.querySelector('#Object').style.background = 'rgb(44, 12, 12)'
+            document.querySelector('#ObjectMatch').style.color = "rgb(44, 12, 12)"
+            //change styles back 
+            //remove everything from the array
+            //reset card styling 
+        }
+    }
+}
+
+cards[2].addEventListener('click', cardThreeEvent)
+cards[5].addEventListener('click', cardThreeEvent)
+
+//cards 3 and 7 flip function(match HTML's)
+
+const cardFourEvent = (e)=>{
+    flippedCard_4 = e.target.getAttribute('extra')
+    console.log(flippedCard_4)
+    allCardsArr.push(flippedCard_4)
+        //right now this only targets the first card to flip
+    e.target.style.background = "black"
+    e.target.style.color = "white"
+    if(allCardsArr.length == 2){
+        //do a check
+        if(allCardsArr[0] === allCardsArr[1]){
+            console.log('its a match')
+            allCardsArr = []
+            pairsMade ++
+            document.querySelectorAll("input")[1].value = pairsMade
+
+        }else {
+            allCardsArr = []
+            defaultLives --
+            document.querySelectorAll("input")[0].value = defaultLives
+            
+            document.querySelector('#HTML').style.background = 'rgb(44, 12, 12)'
+            document.querySelector('#HTMLmatch').style.color = "rgb(44, 12, 12)"
+            //change styles back 
+            //remove everything from the array
+            //reset card styling 
+        }
+    }
+}
+
+cards[3].addEventListener('click', cardFourEvent)
+cards[7].addEventListener('click', cardFourEvent)
 
 
 
+
+//generates the user information screen
+const generatePlayerName = 
+    document.querySelector("button").addEventListener('click', (e)=> {
+        document.querySelectorAll("li")[0].innerHTML = "awesome programmer"
+})
+const generatePlayerLives = document.querySelector("button").addEventListener("click", (e) => {
+        document.querySelectorAll("input")[0].value = 3
+})
+const generatePlayerPairs = document.querySelector("button").addEventListener("click", (e) => {
+    document.querySelectorAll("input")[1].value = 0
+})
+
+//function that identifies when pairs are matched/identified or not
+
+// const pairCompair = () => {
+    
+// }
+
+
+
+
+
+
+
+//function that generates the "winner" window when all pairs are made on the board
+
+// researching event listener .oninput
+// const values = document.getAttribute("pairs")
+// const generateWinner = (e) => {
+//     if(document.querySelectorAll("input")[1].value == 4){
+//         console.log('winner')
+//     }
+//     let currentPairsValue = document.querySelectorAll("input")[1].value
+//     console.log(`currently at ${currentPairsValue} pairs`)
+//     //create a window with innerHTML declairing game won
+//     //replace all cards backgrounds to original color
+// }
+// values.addEventListener('oninput',generateWinner)
+
+//function that generates the game over window when lives = 0;
+const gameOver = () => {
+    //if lives === 0 
+    //generate window declaring game over 
+    //reset all backgrounds to original 
+}
+
+
+
+
+///////////////////////////////////
+
+
+
+
+/*
 const flipCard =()=>{
-    
-    
+       
     for(let i = 0; i < htmlIds.length; i++){
         
         if(htmlIds[i] === "#DOM"){
@@ -742,51 +931,9 @@ const flipCard =()=>{
 }
 flipCard()
 
+*/
 
 
 
 
-//generates the user information screen
-const generatePlayerName = 
-    document.querySelector("button").addEventListener('click', (e)=> {
-        document.querySelectorAll("li")[0].innerHTML = "awesome programmer"
-})
-const generatePlayerLives = document.querySelector("button").addEventListener("click", (e) => {
-        document.querySelectorAll("input")[0].value = 3
-})
-const generatePlayerPairs = document.querySelector("button").addEventListener("click", (e) => {
-    document.querySelectorAll("input")[1].value = 0
-})
-
-//function that identifies when pairs are matched/identified or not
-
-// const pairCompair = () => {
-    
-// }
-
-//function that generates pop-out window with the syntax information triggered when a pair is made
-const generatePairWindow = () => {
-    //create a window element with innerHTML language describing the syntax of the pair made
-    //change the background color of both cards that were paired-- with a button to close the window
-} 
-
-//function that triggers on miss and subtracts a life from the player board when 2 cards do not match and returns the original background color
-const missPair = () => {
-    //subtract 1 from the lives in the player window
-    //return the background color of both cards to original 
-}
-
-
-//function that generates the "winner" window when all pairs are made on the board
-const generateWinner = () => {
-    //create a window with innerHTML declairing game won
-    //replace all cards backgrounds to original color
-}
-
-//function that generates the game over window when lives = 0;
-const gameOver = () => {
-    //if lives === 0 
-    //generate window declaring game over 
-    //reset all backgrounds to original 
-}
 
